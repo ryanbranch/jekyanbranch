@@ -1,4 +1,35 @@
-<nav>
-  <hr />
-  <p>Copyright Ryan Branch 2020<p>
-</nav>
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">site title placeholder</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              site author placeholder
+            {%- else -%}
+              site title placeholder
+            {%- endif -%}
+            </li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:site@email.placeholder">site.email placeholder</a></li>
+            {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        social include placeholder
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>placeholder spot for a site description or something similar</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
