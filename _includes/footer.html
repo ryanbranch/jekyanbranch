@@ -3,30 +3,49 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">site title placeholder</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
+        <h2 class="footer-heading-empty">&#160;</h2>
+        <ul class="footer-list">
           <li class="p-name">
-            {%- if site.author -%}
-              site author placeholder
-            {%- else -%}
-              site title placeholder
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:site@email.placeholder">site.email placeholder</a></li>
-            {%- endif -%}
+            <a href="/sitemap.xml">Sitemap</a>
+          </li>
+          <li class="p-name">
+            <a href="/terms/">Terms</a>
+          </li>
+          <li class="p-name">
+            <a href="/privacy/">Privacy</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer-col footer-col-2">
+        <h2 class="footer-heading">&#169; {{ 'now' | date: "%Y" }} Ryan Branch</h2>
+        <ul class="footer-list">
+          {%- if site.footer_email == true -%}
+          <li class="p-name">
+            contact.ryanbran.ch@gmail.com
+          </li>
+          {%- endif -%}
+          <li class="p-name">
+            <a href="https://contact.ryanbran.ch">Contact Information</a>
+          </li>
+          <li class="p-name">
+            <a href="/LLC/">Consulting</a>
+          </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        social include placeholder
-      </div>
-
       <div class="footer-col footer-col-3">
-        <p>placeholder spot for a site description or something similar</p>
+        <h2 class="footer-heading-empty">&#160;</h2>
+        <ul class="footer-list">
+          <li class="p-name">
+            <a href="https://github.com/ryanbranch/jekyanbranch">Theme</a> written with <a href="https://github.com/jekyll/jekyll">Jekyll</a>
+          </li>
+          <li class="p-name">
+            <a href="https://github.com/ryanbranch/ryanbranch.github.io">Site</a> built with <a href="https://pages.github.com/">GitHub</a>
+          </li>
+        </ul>
       </div>
     </div>
 
