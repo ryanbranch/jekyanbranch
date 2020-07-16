@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
@@ -8,7 +8,7 @@
 	{%- if page.title -%}
       <h1 class="page-heading">{{ page.title }}</h1>
 	  <hr />
-    {%- endif -%}
-    {{ content }}
+  {%- endif -%}
+  {{ content }}
   </body>
 </html>

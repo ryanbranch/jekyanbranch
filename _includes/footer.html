@@ -5,7 +5,7 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <h2 class="footer-heading-empty">&#160;</h2>
+        <h2 class="footer-heading-empty"></h2> <!-- OPTIONAL: Place a [&#169;] in the h2 section -->
         <ul class="footer-list">
           <li class="p-name">
             <a href="/sitemap.xml">Sitemap</a>
@@ -21,6 +21,7 @@
       
       <div class="footer-col footer-col-2">
         <h2 class="footer-heading">&#169; {{ 'now' | date: "%Y" }} Ryan Branch</h2>
+        <hr class="footer-col-hr"/>
         <ul class="footer-list">
           {%- if site.footer_email == true -%}
           <li class="p-name">
@@ -28,7 +29,7 @@
           </li>
           {%- endif -%}
           <li class="p-name">
-            <a href="https://contact.ryanbran.ch">Contact Information</a>
+            <a href="/contact/">Contact Information</a>
           </li>
           <li class="p-name">
             <a href="/LLC/">Consulting</a>
@@ -37,7 +38,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <h2 class="footer-heading-empty">&#160;</h2>
+        <h2 class="footer-heading-empty"></h2> <!-- OPTIONAL: Place a [&#169;] in the h2 section -->
         <ul class="footer-list">
           <li class="p-name">
             <a href="https://github.com/ryanbranch/jekyanbranch">Theme</a> written with <a href="https://github.com/jekyll/jekyll">Jekyll</a>
