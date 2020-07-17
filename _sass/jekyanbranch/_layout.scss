@@ -201,6 +201,97 @@
 
 
 
+
+/**
+ * Site page-nav (All new to ryanbranch/jekyanbranch)
+ */
+ .site-page-nav {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+}
+
+.page-nav-heading {
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit / 2;
+  color: $text-color;
+}
+
+.page-nav-heading-empty {
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit / 2;
+  color: $text-color;
+}
+
+.page-nav-list {
+  list-style: none;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.page-nav-col-wrapper {
+  @include relative-font-size(0.9375);
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.page-nav-col-hr {
+  border: 0.5px solid $grey-color-light;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.page-nav-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.page-nav-col-1 {
+  text-align: center; // Alternatively, can do left for col-1 and right for col-3
+  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  width:         calc(33% - (#{$spacing-unit} / 2));
+}
+
+.page-nav-col-2 {
+  text-align: center;
+  width: -webkit-calc(34% - (#{$spacing-unit} / 2));
+  width:         calc(34% - (#{$spacing-unit} / 2));
+}
+
+.page-nav-col-3 {
+  text-align: center; // Alternatively, can do left for col-1 and right for col-3
+  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  width:         calc(33% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+  .page-nav-col-1,
+  .page-nav-col-2 {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+
+  .page-nav-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+@include media-query($on-palm) {
+  .page-nav-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+
 /**
  * Page content
  */
