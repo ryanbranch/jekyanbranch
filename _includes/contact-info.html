@@ -1,4 +1,12 @@
-<p>Email: <a href="mailto:contact.ryanbran.ch@gmail.com">contact.ryanbran.ch@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/ryanbranch">ryanbranch</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/ryanbranch">/in/ryanbranch</a></p>
-<p>Twitter: <a href="https://twitter.com/rjbranch">@rjbranch</a></p>
+{%- if site.email -%}
+<p>Email: <a href="mailto: {{- site.email -}} "> {{- site.email -}} </a></p>
+{%- endif -%}
+{%- if site.github_username -%}
+  <p>GitHub: <a href="https://github.com/ {{- site.github_username -}} "> {{- site.github_username -}} </a></p>
+{%- endif -%}
+{%- if site.linkedin_username -%}
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ {{- site.linkedin_username -}} ">/in/ {{- site.linkedin_username -}} </a></p>
+{%- endif -%}
+{%- if site.twitter_username -%}
+<p>Twitter: <a href="https://twitter.com/ {{- site.twitter_username -}} ">@ {{- site.twitter_username -}} </a></p>
+{%- endif -%}
