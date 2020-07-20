@@ -212,13 +212,13 @@
 }
 
 .page-nav-heading {
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.5);
   margin-bottom: $spacing-unit / 2;
   color: $text-color;
 }
 
 .page-nav-heading-empty {
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.5);
   margin-bottom: $spacing-unit / 2;
   color: $text-color;
 }
@@ -284,6 +284,18 @@
 }
 
 @include media-query($on-palm) {
+  .page-nav-heading {
+    @include relative-font-size(1.125);
+    margin-bottom: $spacing-unit / 2;
+    color: $text-color;
+  }
+  
+  .page-nav-heading-empty {
+    @include relative-font-size(1.125);
+    margin-bottom: $spacing-unit / 2;
+    color: $text-color;
+  }
+
   .page-nav-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));

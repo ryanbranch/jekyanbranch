@@ -1,3 +1,4 @@
+
 <div>
   {%- assign nav_text = page.title -%}
   {%- if page.nav-title -%}
@@ -6,40 +7,40 @@
 
   <!-- Page Directory Nav -->
   <div class="page-directory-nav">
-    <h1 class="page-heading">
+    <h1 class="page-nav-heading">
       <!-- "Portfolio" text (LEVEL 1) -->
       {%- if page.page-types contains "portfolio-related" -%}
         <a href="{{- site.permalink_portfolio -}}">Portfolio</a>
 
         <!-- "Experience" text (LEVEL 2) -->
         {%- if page.page-types contains "experience-related" -%}
-          &rarr; <a href="{{- site.permalink_experience -}}">Experience</a>
+          {{ site.right_arrow }} <a href="{{- site.permalink_experience -}}">Experience</a>
 
           <!-- Experience-specific text -->
           {%- if page.page-types contains "specific-experience" -%}
-            &rarr; <a href="">{{ nav_text | escape }}</a>
+            {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
 
         {%- endif -%}
 
         <!-- "Software Projects" text (LEVEL 2) -->
         {%- if page.page-types contains "software-related" -%}
-          &rarr; <a href="{{- site.permalink_software_projects -}}">Software Projects</a>
+          {{ site.right_arrow }} <a href="{{- site.permalink_software_projects -}}">Software Projects</a>
 
           <!-- Project-specific text (LEVEL 3) -->
           {%- if page.page-types contains "specific-project" -%}
-            &rarr; <a href="">{{ nav_text | escape }}</a>
+            {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
 
         {%- endif -%}
 
         <!-- "Hardware Projects" text (LEVEL 2) -->
         {%- if page.page-types contains "hardware-related" -%}
-          &rarr; <a href="{{- site.permalink_hardware_projects -}}">Hardware Projects</a>
+          {{ site.right_arrow }} <a href="{{- site.permalink_hardware_projects -}}">Hardware Projects</a>
 
           <!-- Project-specific text (LEVEL 3) -->
           {%- if page.page-types contains "specific-project" -%}
-            &rarr; <a href="">{{ nav_text | escape }}</a>
+            {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
 
         {%- endif -%}
