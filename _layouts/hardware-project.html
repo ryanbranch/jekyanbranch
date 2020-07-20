@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{%- include portfolio-header.html -%}
+
+<div class="hardware-project">
+    {%- if page.page-types contains "hardware-related" and page.page-types contains "specific-project"  -%}
+        {{ content }}
+    {%- else -%}
+        <p class="post-list-heading">page.page-types: {{- page.page-types -}}</p>
+        <h3>WARNING: The "hardware-project" layout is being used but page.type is not equal to "hardware".</h3>
+    {%- endif -%}
+</div>

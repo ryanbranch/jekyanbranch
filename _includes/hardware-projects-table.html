@@ -1,0 +1,40 @@
+<div>
+    {%- assign portfolio_item_paths = site.portfolio_items | map: "path" -%}
+    <h2>PLACEHOLDER FOR Table of Hardware Projects:</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Hardware Placeholder 1</th>
+            <th>Hardware Placeholder 2</th>
+            <th>External Links</th>
+          </tr>
+        </thead>
+        <tbody style="text-align:center;">
+          {%- for path in portfolio_item_paths -%}
+            {%- assign my_item = site.portfolio_items | where: "path", path | first -%}
+            {%- if my_item.title and my_item.page-types contains "hardware-related" and my_item.page-types contains "specific-project"  -%}
+                {%- assign link_text = my_item.title -%}
+                {%- if my_item.nav-title -%}
+                    {%- assign link_text = my_item.nav-title -%}
+                {%- endif -%}
+                <tr>
+                    <td>
+                        Placeholder
+                    </td>
+                    <td>
+                        Placeholder
+                    </td>
+                    <td>
+                        Placeholder
+                    </td>
+                    <td>
+                        <a class="page-link" href="/placeholder/">Placeholder</a>
+                    </td>
+                </tr>
+            {%- endif -%}
+          {%- endfor -%}
+        </tbody>
+    </table>
+    <hr class="page-nav-col-hr" />
+</div>

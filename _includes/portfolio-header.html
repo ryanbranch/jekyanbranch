@@ -1,55 +1,51 @@
-<header class="site-header" role="banner">
+<div>
+  {%- assign nav_text = page.title -%}
+  {%- if page.nav-title -%}
+    {%- assign nav_text = page.nav-title -%}
+  {%- endif -%}
 
-  <div class="wrapper">
-    {%- assign portfolio_item_paths = site.portfolio_items | map: "path" -%}
+  <!-- Page Directory Nav -->
+  <div class="page-directory-nav">
+    <h1 class="page-heading">
+      <!-- "Portfolio" text (LEVEL 1) -->
+      {%- if page.page-types contains "portfolio-related" -%}
+        <a href="{{- site.permalink_portfolio -}}">Portfolio</a>
 
-    
+        <!-- "Experience" text (LEVEL 2) -->
+        {%- if page.page-types contains "experience-related" -%}
+          &rarr; <a href="{{- site.permalink_experience -}}">Experience</a>
 
-    <div class="page-nav-col-wrapper">
-      <div class="page-nav-col page-nav-col-1">
-        <h2 class="page-nav-heading">Test Heading 1</h2> <!-- OPTIONAL: Place a [&#169;] in the h2 section -->
-        <ul class="page-nav-list">
-          {%- for path in portfolio_item_paths -%}
-            {%- assign my_item = site.portfolio_items | where: "path", path | first -%}
-            {%- if my_item.title -%}
-            <li class="p-name">
-              <a class="page-link" href="{{ my_item.url | relative_url }}">{{ my_item.title | escape }}</a>
-            </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
-      
-      <div class="page-nav-col page-nav-col-2">
-        <h2 class="page-nav-heading">Test Heading 2</h2> <!-- OPTIONAL: Place a [&#169;] in the h2 section -->
-        <ul class="page-nav-list">
-          {%- if site.page-nav_email == true -%}
-          <li class="p-name">
-            contact.ryanbran.ch@gmail.com
-          </li>
+          <!-- Experience-specific text -->
+          {%- if page.page-types contains "specific-experience" -%}
+            &rarr; <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
-          <li class="p-name">
-            <p>Future Link 1</p>
-          </li>
-          <li class="p-name">
-            <p>Future Link 2</p>
-          </li>
-        </ul>
-      </div>
 
-      <div class="page-nav-col page-nav-col-3">
-        <h2 class="page-nav-heading">Test Heading 3</h2> <!-- OPTIONAL: Place a [&#169;] in the h2 section -->
-        <ul class="page-nav-list">
-          <li class="p-name">
-            <p>Future Link 1</p>
-          </li>
-          <li class="p-name">
-            <p>Future Link 2</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+        {%- endif -%}
 
+        <!-- "Software Projects" text (LEVEL 2) -->
+        {%- if page.page-types contains "software-related" -%}
+          &rarr; <a href="{{- site.permalink_software_projects -}}">Software Projects</a>
+
+          <!-- Project-specific text (LEVEL 3) -->
+          {%- if page.page-types contains "specific-project" -%}
+            &rarr; <a href="">{{ nav_text | escape }}</a>
+          {%- endif -%}
+
+        {%- endif -%}
+
+        <!-- "Hardware Projects" text (LEVEL 2) -->
+        {%- if page.page-types contains "hardware-related" -%}
+          &rarr; <a href="{{- site.permalink_hardware_projects -}}">Hardware Projects</a>
+
+          <!-- Project-specific text (LEVEL 3) -->
+          {%- if page.page-types contains "specific-project" -%}
+            &rarr; <a href="">{{ nav_text | escape }}</a>
+          {%- endif -%}
+
+        {%- endif -%}
+
+      {%- endif -%}
+    </h1>
   </div>
-
-</header>
+  <hr class="page-nav-col-hr" />
+</div>

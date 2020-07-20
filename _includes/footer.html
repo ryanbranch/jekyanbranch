@@ -22,9 +22,9 @@
       <div class="footer-col footer-col-2">
         <h2 class="footer-heading-empty"></h2> <!-- OPTIONAL: Place a [&#160;] in the h2 section -->
         <ul class="footer-list">
-          {%- if site.footer_email == true -%}
+          {%- if site.footer_email == true and site.email -%}
           <li class="p-name">
-            contact.ryanbran.ch@gmail.com
+            {{- site.email -}}
           </li>
           {%- endif -%}
           <li class="p-name">

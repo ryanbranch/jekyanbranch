@@ -1,0 +1,48 @@
+<div>
+    {%- assign portfolio_item_paths = site.portfolio_items | map: "path" -%}
+    <h2>Table of Software Projects:</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Languages / Frameworks</th>
+            <th>Libraries / Modules</th>
+            <th>GitHub Repo</th>
+          </tr>
+        </thead>
+        <tbody style="text-align:center;">
+          {%- for path in portfolio_item_paths -%}
+            {%- assign my_item = site.portfolio_items | where: "path", path | first -%}
+            {%- if my_item.title and my_item.page-types contains "software-related" and my_item.page-types contains "specific-project"  -%}
+                {%- assign link_text = my_item.title -%}
+                {%- if my_item.nav-title -%}
+                    {%- assign link_text = my_item.nav-title -%}
+                {%- endif -%}
+                <tr>
+                    <td>
+                        <a class="page-link" href="{{ my_item.url | relative_url }}">{{- link_text | escape -}}</a>
+                    </td>
+                    <td>
+                        {%- if my_item.languages -%}
+                            {{- my_item.languages | escape -}}
+                        {%- else -%}
+                            Unspecified
+                        {%- endif -%}
+                    </td>
+                    <td>
+                        {%- if my_item.libraries -%}
+                            {{- my_item.libraries | escape -}}
+                        {%- else -%}
+                            Unspecified
+                        {%- endif -%}
+                    </td>
+                    <td>
+                        <a class="page-link" href="http://github.com/{{- my_item.github-repo -}}">{{- my_item.github-repo | escape -}}</a>
+                    </td>
+                </tr>
+            {%- endif -%}
+          {%- endfor -%}
+        </tbody>
+    </table>
+    <hr class="page-nav-col-hr" />
+</div>
