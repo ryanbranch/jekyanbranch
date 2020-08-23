@@ -386,3 +386,13 @@
     }
   }
 }
+
+
+/**
+ * Project Content (All new to ryanbranch/jekyanbranch)
+ */
+
+.project-readme-include {
+  @include relative-font-size(0.8);
+  color: $text-color;
+}

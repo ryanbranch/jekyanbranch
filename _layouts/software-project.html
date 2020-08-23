@@ -3,11 +3,20 @@ layout: default
 ---
 {%- include portfolio-header.html -%}
 
-<div class="software-project">
-    {%- if page.page-types contains "software-related" and page.page-types contains "specific-project"  -%}
+{%- assign nav_text = page.title -%}
+{%- if page.nav-title -%}
+    {%- assign nav_text = page.nav-title -%}
+{%- endif -%}
+
+{%- if page.page-types contains "software-related" and page.page-types contains "specific-project"  -%}
+
+    <div class="software-project">
+    
         {{ content }}
-    {%- else -%}
-        <p class="post-list-heading">page.page-types: {{- page.page-types -}}</p>
-        <h3>WARNING: The "software-project" layout is being used but page.type is not equal to "software".</h3>
-    {%- endif -%}
-</div>
+
+    </div>
+
+{%- else -%}
+    <p class="post-list-heading">page.page-types: {{- page.page-types -}}</p>
+    <h3>WARNING: The "software-project" layout is being used but page.types is missing "software-related" or "specific-project".</h3>
+{%- endif -%}
