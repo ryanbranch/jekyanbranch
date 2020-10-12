@@ -3,12 +3,13 @@
     {%- assign portfolio_item_paths = site.portfolio_items | map: "path" -%}
     <h2>Table of Software Projects:</h2>
     <table>
-        <thead>
+        <thead style="text-align:center;">
           <tr>
             <th>Project Name</th>
-            <th>Languages / Frameworks</th>
-            <th>Libraries / Modules</th>
-            <th>GitHub Repo</th>
+            <th>Created</th>
+            <th>Language(s)</th>
+            <th>Primary Module(s)</th>
+            <th>Branch</th>
           </tr>
         </thead>
         <tbody style="text-align:center;">
@@ -22,6 +23,13 @@
                 <tr>
                     <td>
                         <a class="page-link" href="{{ my_item.url | relative_url }}">{{- link_text | escape -}}</a>
+                    </td>
+                    <td>
+                        {%- if my_item.start-date -%}
+                            {{- my_item.start-date | escape -}}
+                        {%- else -%}
+                            Unspecified
+                        {%- endif -%}
                     </td>
                     <td>
                         {%- if my_item.languages -%}
@@ -38,7 +46,11 @@
                         {%- endif -%}
                     </td>
                     <td>
-                        <a class="page-link" href="http://github.com/{{- my_item.github-repo-owner -}}/{{- my_item.github-repo -}}">{{- my_item.github-repo | escape -}}</a>
+                        {%- if my_item.github-repo-branch -%}
+                            <a class="page-link" href="http://github.com/{{- my_item.github-repo-owner -}}/{{- my_item.github-repo -}}">{{- my_item.github-repo-branch | escape -}}</a>
+                        {%- else -%}
+                            <a class="page-link" href="http://github.com/{{- my_item.github-repo-owner -}}/{{- my_item.github-repo -}}">Unspecified</a>
+                        {%- endif -%}
                     </td>
                 </tr>
             {%- endif -%}
