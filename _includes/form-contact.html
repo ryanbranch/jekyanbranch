@@ -4,6 +4,7 @@
 action="https://formspree.io/f/{{- site.formspree_endpoint_contact -}}"
 method="POST"
 >
+<input type="hidden" name="_subject" value="New Form Submission from {{- site.title -}}" />
 <table>
   <tr>
     <td>First Name:&nbsp;&#9;</td>
