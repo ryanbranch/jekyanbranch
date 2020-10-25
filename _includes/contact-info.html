@@ -3,7 +3,11 @@
   <p>Email: <a href="mailto: {{- site.email -}} "> {{- site.email -}} </a></p>
 {%- endif -%}
 {%- if site.github_username -%}
-  <p>GitHub: <a href="https://github.com/ {{- site.github_username -}} "> {{- site.github_username -}} </a></p>
+  <p>GitHub: <a href="https://github.com/ {{- site.github_username -}} "> {{- site.github_username -}} </a>
+    {%- if site.github_gist -%}
+    (<a href="https://gist.github.com// {{- site.github_username -}} ">GitHub Gist</a>)
+    {%- endif -%}
+  </p>
 {%- endif -%}
 {%- if site.linkedin_username -%}
   <p>LinkedIn: <a href="https://www.linkedin.com/in/ {{- site.linkedin_username -}} ">/in/ {{- site.linkedin_username -}} </a></p>
