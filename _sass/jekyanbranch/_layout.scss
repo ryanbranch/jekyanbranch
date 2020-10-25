@@ -395,6 +395,10 @@
       @include relative-font-size(1.125);
     }
   }
+
+  ul, ol {
+    padding-left: 30px;
+  }
 }
 
 
