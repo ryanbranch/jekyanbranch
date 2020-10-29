@@ -359,6 +359,16 @@
   }
 }
 
+.post-subtitle {
+  @include relative-font-size(1.54);
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.32);
+  }
+}
+
 .post-content {
   margin-bottom: $spacing-unit;
 
@@ -384,6 +394,10 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+
+  ul, ol {
+    padding-left: 30px;
   }
 }
 
