@@ -5,15 +5,19 @@
 
   <body>
 
-    {%- include header.html -%}
+    <div style="padding-left: calc(100vw - 100%);">
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+      {%- include header.html -%}
 
-    {%- include footer.html -%}
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+
+      {%- include footer.html -%}
+
+    </div>
 
   </body>
 
