@@ -12,13 +12,13 @@ layout: default
 		{%- endif -%}</p>
 		<p class="post-meta">
 		  {%- if page.author -%}
-			Written by <strong><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span></strong> on 
+			Written by <strong><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span></strong> on
 		  {%- elsif site.author -%}
-		    Written by <strong><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ site.author }}</span></span></strong> on 
+		    Written by <strong><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ site.author }}</span></span></strong> on
 		  {%- endif -%}
 		  <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-			<strong>{{ page.date | date: date_format }}</strong>
+			<strong>&nbsp;{{ page.date | date: date_format }}</strong>
 		  </time>
 		</p>
 	  </header>
