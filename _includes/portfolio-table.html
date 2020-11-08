@@ -22,38 +22,10 @@
       
       <div class="page-nav-col page-nav-col-2">
         <h2 class="page-nav-heading"><a class="page-link" href="{{- site.permalink_software_projects -}}">Software Projects</a></h2>
-        <ul class="page-nav-list">
-          {%- for path in portfolio_item_paths -%}
-            {%- assign my_item = site.portfolio_items | where: "path", path | first -%}
-            {%- if my_item.title and my_item.page-types contains "software-related" and my_item.page-types contains "specific-project"  -%}
-              {%- assign link_text = my_item.title -%}
-                {%- if my_item.nav-title -%}
-                  {%- assign link_text = my_item.nav-title -%}
-                {%- endif -%}
-              <li class="p-name">
-                <a class="page-link" href="{{ my_item.url | relative_url }}">{{ link_text | escape }}</a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
       </div>
 
       <div class="page-nav-col page-nav-col-3">
         <h2 class="page-nav-heading"><a class="page-link" href="{{- site.permalink_hardware_projects -}}">Hardware Projects</a></h2>
-        <ul class="page-nav-list">
-          {%- for path in portfolio_item_paths -%}
-            {%- assign my_item = site.portfolio_items | where: "path", path | first -%}
-            {%- if my_item.title and my_item.page-types contains "hardware-related" and my_item.page-types contains "specific-project"  -%}
-              {%- assign link_text = my_item.title -%}
-                {%- if my_item.nav-title -%}
-                  {%- assign link_text = my_item.nav-title -%}
-                {%- endif -%}
-              <li class="p-name">
-                <a class="page-link" href="{{ my_item.url | relative_url }}">{{ link_text | escape }}</a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
       </div>
     </div>
   </div>
