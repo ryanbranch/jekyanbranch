@@ -1,10 +1,10 @@
 
-{%- if site.formspree_endpoint_contact -%}
+{%- if site.formspree_endpoint_privacy -%}
 <form
-action="https://formspree.io/f/{{- site.formspree_endpoint_contact -}}"
+action="https://formspree.io/f/{{- site.formspree_endpoint_privacy -}}"
 method="POST"
 >
-<input type="hidden" name="_subject" value="New Form Submission from {{- site.title -}}" />
+<input type="hidden" name="_subject" value="New Privacy Request from {{- site.title -}}" />
 <table>
   <tr>
     <td>First Name:&nbsp;&#9;</td>
@@ -33,13 +33,19 @@ method="POST"
   <tr>
     <td>Message:&nbsp;&#9;</td>
     <td>
-      <textarea name="Message" required></textarea>
+      <textarea name="Message"></textarea>
     </td>
   </tr>
   <tr>
-    <td>I agree to the <a href="/privacy/"><strong>Privacy Policy</strong></a>&nbsp;&#9;</td>
+    <td>Request a copy of your personal data&nbsp;&#9;</td>
     <td>
-      <input type="checkbox" id="delete" name="Delete" value="YES" required>
+      <input type="checkbox" id="copy" name="Copy" value="YES">
+    </td>
+  </tr>
+  <tr>
+    <td>Request the deletion of your personal data&nbsp;&#9;</td>
+    <td>
+      <input type="checkbox" id="delete" name="Delete" value="YES">
     </td>
   </tr>
 </table>
