@@ -8,43 +8,46 @@
   <!-- Page Directory Nav -->
   <div class="page-directory-nav">
     <h1 class="page-nav-heading">
-      <!-- "Portfolio" text (LEVEL 1) -->
       {%- if page.page-types contains "portfolio-related" -%}
+        <!-- "Portfolio" text (LEVEL 1) -->
         <a href="{{- site.permalink_portfolio -}}">Portfolio</a>
 
-        <!-- "Experience" text (LEVEL 2) -->
-        {%- if page.page-types contains "experience-related" -%}
-          {{ site.right_arrow }} <a href="{{- site.permalink_experience -}}">Experience</a>
+        {%- if page.page-types contains "background-information" -%}
+          <!-- "Background" text (LEVEL 2) -->
+          {{ site.right_arrow }} Background
 
-          <!-- Research-specific text (LEVEL 3) -->
-          {%- if page.page-types contains "research-related" -%}
-            {{ site.right_arrow }} <a href="{{- site.permalink_research -}}">Research</a>
-          {%- endif -%}
+        {%- elsif page.page-types contains "research-related" -%}
+          <!-- "Research" text (LEVEL 2) -->
+          {{ site.right_arrow }} <a href="{{- site.permalink_research -}}">Research</a>
 
-          <!-- Experience-specific text (LEVEL 3 or 4) -->
-          {%- if page.page-types contains "specific-experience" -%}
-            {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
-          {%- endif -%}
+        {%- elsif page.page-types contains "employment-related" -%}
+          <!-- "Employment" text (LEVEL 2) -->
+          {{ site.right_arrow }} <a href="{{- site.permalink_employment -}}">Employment</a>
 
         {%- endif -%}
 
-        <!-- "Software Projects" text (LEVEL 2) -->
+        {%- if page.page-types contains "specific-experience" -%}
+          <!-- Experience-specific text (LEVEL 3) -->
+          {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
+        {%- endif -%}
+
         {%- if page.page-types contains "software-related" -%}
+          <!-- "Software Projects" text (LEVEL 2) -->
           {{ site.right_arrow }} <a href="{{- site.permalink_software_projects -}}">Software Projects</a>
 
-          <!-- Project-specific text (LEVEL 3) -->
           {%- if page.page-types contains "specific-project" -%}
+            <!-- Project-specific text (LEVEL 3) -->
             {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
 
         {%- endif -%}
 
-        <!-- "Hardware Projects" text (LEVEL 2) -->
         {%- if page.page-types contains "hardware-related" -%}
+          <!-- "Hardware Projects" text (LEVEL 2) -->
           {{ site.right_arrow }} <a href="{{- site.permalink_hardware_projects -}}">Hardware Projects</a>
 
-          <!-- Project-specific text (LEVEL 3) -->
           {%- if page.page-types contains "specific-project" -%}
+            <!-- Project-specific text (LEVEL 3) -->
             {{ site.right_arrow }} <a href="">{{ nav_text | escape }}</a>
           {%- endif -%}
 
