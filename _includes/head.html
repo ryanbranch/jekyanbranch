@@ -20,4 +20,8 @@
     {%- include google-fonts.html -%}
   {%- endif -%}
 
+  {%- if site.captcha == true -%}
+    {%- include captcha-head.html -%}
+  {%- endif -%}
+
 </head>

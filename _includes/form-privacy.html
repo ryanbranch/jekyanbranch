@@ -49,6 +49,11 @@ method="POST"
     </td>
   </tr>
 </table>
+<br />
+{%- if site.captcha == true -%}
+{%- include captcha-body.html -%}
+{%- endif -%}
+<br />
 <input type="submit" value="Send">
 </form>
 {%- endif -%}
