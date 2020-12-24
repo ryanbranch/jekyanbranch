@@ -6,4 +6,7 @@
   {%- if site.linkedin_username and site.permalink_icon_linkedin -%}
     <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><img class="icon-link-footer" src="{{- site.permalink_icon_linkedin -}}" alt="Link to Ryan Branch's Profile on LinkedIn"></img></a>
   {%- endif -%}
-</ul>
+  {%- if site.orcid_id and site.permalink_icon_orcid -%}
+    <a href="https://orcid.org/ {{- site.orcid_id -}} "><img class="icon-link-footer" src="{{- site.permalink_icon_orcid -}}" alt="Link to Ryan Branch's Profile on ORCID"></img></a>
+  {%- endif -%}
+</div>
