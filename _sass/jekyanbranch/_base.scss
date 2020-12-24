@@ -21,16 +21,13 @@ dl, dd, ol, ul, figure {
 /**
  * Special Whitespace Content (All new to ryanbranch/jekyanbranch)
  */
-hr {
-  
-  .hr-post-header {
-    line-height: 10px;
-  }
+hr.hr-post-header {
+  line-height: 10px;
+}
 
-  .hr-hidden-br-half {
-    visibility: hidden;
-    line-height: $line-spacing-percent / 2;
-  }
+hr.hr-hidden-br-half {
+  visibility: hidden;
+  line-height: $line-spacing-percent / 2;
 }
 
 
