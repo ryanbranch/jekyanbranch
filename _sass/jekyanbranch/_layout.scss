@@ -328,7 +328,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit;
   flex: 1;
 }
 
@@ -379,12 +379,12 @@
 }
 
 .post-subtitle {
-  @include relative-font-size(1.54);
+  @include relative-font-size(1.25);
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(1.32);
+    @include relative-font-size(1.125);
   }
 }
 
