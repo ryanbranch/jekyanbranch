@@ -19,7 +19,9 @@ $header-nav-font-size-multiplier: 1.375 !default;
 $header-nav-font-family: '"Roboto", Arial, Helvetica, sans-serif';
 $header-nav-font-family: unquote($header-nav-font-family + ', ' + $base-font-family);
 
-$spacing-unit:     10px !default;
+$spacing-unit:         10px !default;
+// Additional Units (NEW TO JEKYANBRANCH)
+$line-spacing-percent:    175% !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;

@@ -8,6 +8,28 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+/**
+* Special LINE SPACING Content (All new to ryanbranch/jekyanbranch)
+* NOTE: Excludes the <pre> tag, to prevent code from being stretched
+*/
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, hr,
+dl, dd, ol, ul, figure {
+  line-height: $line-spacing-percent;
+}
+
+/**
+ * Special Whitespace Content (All new to ryanbranch/jekyanbranch)
+ */
+hr.hr-post-header {
+  line-height: 10px;
+  margin-top: -10px;
+}
+
+hr.hr-hidden-br-half {
+  visibility: hidden;
+  line-height: $line-spacing-percent / 2;
+}
 
 
 /**
