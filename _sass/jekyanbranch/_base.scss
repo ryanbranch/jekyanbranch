@@ -265,6 +265,18 @@ table {
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    /**
+    * Borderless Table Headers and Cells (All new to ryanbranch/jekyanbranch)
+    */
+    .borderless {
+      border: 0px;
+    }
+    /**
+    * Wide, 2-Column Tables (All new to ryanbranch/jekyanbranch)
+    */
+    .wide2col {
+      width: 50%;
+    }
   }
   th {
     background-color: lighten($grey-color-light, 3%);
@@ -274,4 +286,20 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+/**
+* Tables with Border Spacing (All new to ryanbranch/jekyanbranch)
+*/
+table, th, td {
+
+  .borderspaced2x {
+    border-spacing: $spacing-unit * 2;
+  }
+}
+
