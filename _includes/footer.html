@@ -51,16 +51,19 @@
 
     </div>
     <hr class="footer-col-hr"/>
-    <table class="center borderspaced2x">
-      <tr>
-        <td class="borderless wide2col borderspaced2x">
-          <h2 class="footer-heading">A ryanbran.ch website</h2>
-        </td>
-        <td class="borderless wide2col borderspaced2x">
-          <h2 class="footer-heading">&#169; {{ 'now' | date: "%Y" }} Ryan Branch LLC</h2>
-        </td>
-      </tr>
-    </table>
+
+    <div style="display:table; width:100%; text-align:center;">
+      <div style="display:table-row-group;">
+        <div style="display:table-row;">
+          <div style="border: 0px solid transparent; display: table-cell; padding: 10px;">
+            &nbsp;A ryanbran.ch Website
+          </div>
+          <div style="border: 0px solid transparent; display: table-cell; padding: 10px;">
+            &#169; 2021 Ryan Branch LLC
+          </div>
+        </div>
+      </div>
+    </div>
     {%- include social.html -%}
 
   </div>
